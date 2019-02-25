@@ -23,44 +23,42 @@ var cards =
 	}
 ];
 
+//Creating an array 
 var cardsInPlay = [];
 
+//To check when two card are selected and if they are matching.
 var checkForMatch = function ()
 {
 	if (cardsInPlay[0] === cardsInPlay[1]) 
 	{
-	console.log("You found a match!");
+	alert("You found a match!");
 	} 
 		else 
 		{
-		console.log("Sorry, try again.");
+		alert("Sorry, try again.");
 		}
 }
-
+//Function every time flipping the cards to back side front.
 var flipCard = function (cardId)
 {
+  	cardsInPlay.push(cards[cardId].rank);
 	if (cardsInPlay.length === 2)
 	{
-		if (cardsInPlay[0] === cardsInPlay[1])
-		{
-		alert ("You found a match!.")
-		}
-			else 
-			{
-			alert ("Sorry, try again.")
-		}
+	checkForMatch();
 	}
-
-	console.log("User flipped" + "" + cards[cardId].rank);
-	cardsInPlay.push(cards[cardId].rank);
+console.log("User flipped" + "" + cards[cardId].rank);
+console.log("User flipped" + "" + cards[cardId].suit);
+console.log("User flipped" + "" + cards[cardId].pathImage);
 };
 
-flipCard (3);
-flipCard (1);
-checkForMatch();
+
 
 console.log(cardsInPlay.cardImage);
 console.log(cardsInPlay.suit);
+
+flipCard (0);
+flipCard (1);
+
 
 
 
