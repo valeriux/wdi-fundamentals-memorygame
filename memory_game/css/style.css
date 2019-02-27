@@ -85,15 +85,6 @@ img
   	margin-left: 8px;
 }
 
-#IG
-{
-	font-family: "Raleway";
-	color:#FFFFFF;
-	letter-spacing: 1px;
-	font-weight: 600;
-	font-size: 18px;
-}
-
 footer
 {
 	text-transform: uppercase;
@@ -105,6 +96,18 @@ footer
 	letter-spacing: .08em;
 	font-weight: 500;
 }
+
+
+#IG
+{
+	font-family: "Raleway";
+	color:#FFFFFF;
+	letter-spacing: 1px;
+	font-weight: 600;
+	font-size: 18px;
+}
+
+
 .clearfix:after
 {
 	visibility: hidden;
@@ -132,4 +135,9 @@ footer
 	font-weight: 700;
 }
 
-
+.button {
+	font-size: 26px;
+	background-color: #F15B31;
+	color: #FFFFFF;
+	border-radius: 5px;
+}

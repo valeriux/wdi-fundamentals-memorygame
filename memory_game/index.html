@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Memory Game</title>
+<title>Memory Card Game</title>
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link href="https://fonts.googleapis.com/css?family=Droid+Serif|Raleway:400,500,600,700" rel="stylesheet">
 
-<link rel="stylesheet" type="text/css" href="css/reset.css">
 </head>
 
 <body>
@@ -18,28 +17,23 @@
 </header>
 
 <nav>
-<a class="IG" href="#">INSTRUCTIONS</a> 
-<a class="IG" href="#">GAME</a>
+	<a class="IG" href="#">INSTRUCTIONS</a> 
+	<a class="IG" href="#">GAME</a>
 </nav>
-
 
 
 <main>
 
-<h2>INSTRUCTIONS</h2>
+	<h2>INSTRUCTIONS</h2>
 
-<p>Concentration, also know as Match Match, Pelmanism, Shinkei-suijaku, Pexeso or simply Pairs, is a card game in which all the cards are laid face down on a surface and two cards are flipped face up over each turn. The object of the game is to turn over pairs of matching cards.
-</p>
+	<p>Concentration, also know as Match Match, Pelmanism, Shinkei-suijaku, Pexeso or simply Pairs, is a card game in which all the cards are laid face down on a surface and two cards are flipped face up over each turn. The object of the game is to turn over pairs of matching cards.
+	</p>
 
-<div>
- 	<img src="images/back.png" alt="Queen of Diamonds" title="Queen of Diamonds">
+	<div id=game>
+	<div id="game-board" class="board clearfix"></div>
+	</div>
 
-	<img src="images/back.png" alt="Queen of Hearts" title="Queen of Hearts">
-
-	<img src="images/back.png" alt="Keen of Diamonds" title="Keen of Diamonds">
-
-	<img src="images/back.png" alt="Keen of Hearts" title="Keen of Hearts">
-</div>
+ 	<button class="button" type="submit" onclick="resetGame()" > Reset Game </button>
 
 
 
@@ -47,9 +41,9 @@
 
 <footer class="clearfix" >
 
-<p class="copyright">Copyright 2017</p>
+<p class="copyright">Copyright 2019</p>
 
-<p  class="message">Created with &hearts; by 
+<p  class="message">Created with &hearts; by Valeria Bocanegra
 
 <span class="name">GA</span>
 </p>

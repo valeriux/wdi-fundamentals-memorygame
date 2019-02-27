@@ -1,4 +1,4 @@
-
+//Card's array
 var cards = 
 [
 	{
@@ -23,8 +23,23 @@ var cards =
 	}
 ];
 
-//Creating an array 
 var cardsInPlay = [];
+
+//Function every time flipping the cards to back side front.
+var flipCard = function ()
+{
+	var cardId = this.getAttribute('data-id');
+	
+	this.setAttribute('src',cards[cardId].pathImage);
+
+  	cardsInPlay.push(cards[cardId].rank);
+	
+	if (cardsInPlay.length === 2)
+	{
+	checkForMatch();
+	}
+};
+
 
 //To check when two card are selected and if they are matching.
 var checkForMatch = function ()
@@ -38,27 +53,30 @@ var checkForMatch = function ()
 		alert("Sorry, try again.");
 		}
 }
-//Function every time flipping the cards to back side front.
-var flipCard = function (cardId)
+
+
+
+
+//Funtion to loads images in the board.
+var createBoard = function ()
 {
-  	cardsInPlay.push(cards[cardId].rank);
-	if (cardsInPlay.length === 2)
+	for (var i=0; i < cards.length; i++)
 	{
-	checkForMatch();
+		var cardElement = document.createElement('img');
+		cardElement.setAttribute('src','images/back.png');
+		cardElement.setAttribute('data-id',i);
+		cardElement.addEventListener('click', flipCard);
+		document.getElementById('game-board').appendChild(cardElement);
 	}
-console.log("User flipped" + "" + cards[cardId].rank);
-console.log("User flipped" + "" + cards[cardId].suit);
-console.log("User flipped" + "" + cards[cardId].pathImage);
+}
+
+//Invoking createBoard function.
+createBoard();
+
+//Function Reset Game when the user do click.
+function resetGame() {
+	window.location.reload();
 };
-
-
-
-console.log(cardsInPlay.cardImage);
-console.log(cardsInPlay.suit);
-
-flipCard (0);
-flipCard (1);
-
 
 
 
